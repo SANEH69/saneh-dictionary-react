@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Meaning from './Meaning';
 import axios from "axios";
+import './Dictionary.css';
 
 export default function Dictionary(props) {
     const [word, setWord] = useState(props.word);
@@ -34,8 +35,10 @@ export default function Dictionary(props) {
     return (
         <div>
             {form}
+            <div className="results">
             <p>{word}</p>
             <Meaning results={results} />
+            </div>
         </div>
     );
 }
