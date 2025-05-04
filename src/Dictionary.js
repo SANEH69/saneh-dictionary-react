@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Meaning from './Meaning';
+import Photos from "./Photos";
 import axios from "axios";
 import './Dictionary.css';
 
@@ -13,7 +14,7 @@ export default function Dictionary(props) {
     }
 
     function showImage(response) {
-        setImage(response.data.photos)
+        setImage(response.data)
     }
 
     function displayWord(event) {
@@ -48,6 +49,7 @@ export default function Dictionary(props) {
             <div className="results">
             <h3>{word} | <em>{results.phonetic}</em></h3>
             <Meaning results={results} />
+            <Photos image={image} />
             </div>
         </div>
     )

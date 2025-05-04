@@ -1,13 +1,17 @@
 import React from "react";
 
-export default function Photos(props) {
-    if (props.image) {
-    return (
-        <div>
-            <img src={props.image.src} alt={props.image.alt} />
-        </div>
-    );
+export default function Photos({ image }) {
+    if (image) {
+        return (
+            <div>
+                {image.photos.map((photo) => (
+                    <div key={photo.id}>
+                        <img src={photo.src.landscape} alt={image.alt} />
+                    </div>
+                ))}
+            </div>
+        );
     } else {
-        return <p>Generating image...</p>
-   }
+        return <p>Generating image...</p>;
+    }
 }
