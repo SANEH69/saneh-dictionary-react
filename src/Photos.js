@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Photos({ image }) {
-    if (image) {
+    if (image && Array.isArray(image.photos)) {
         return (
             <div>
                 {image.photos.map((photo) => (
