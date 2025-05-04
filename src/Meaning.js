@@ -14,7 +14,9 @@ export default function Meaning(props) {
                         </div>
                     );
                 })}
+                
             </div>
+            
         );
     } else {
         return <p>Not found...</p>;
