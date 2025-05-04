@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Definitions(props) {
-    console.log(props.meaning);
 
     if (props.meaning) {
         return (
