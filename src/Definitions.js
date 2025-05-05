@@ -1,10 +1,11 @@
 import React from "react";
+import './Definitions.css';
 
 export default function Definitions(props) {
 
     if (props.meaning) {
         return (
-            <div>
+            <div  className="definitions">
                 <p><strong>{props.meaning.partOfSpeech}</strong></p>
                 <p>{props.meaning.definition}.</p>
                 <p><em>{props.meaning.example}</em></p>
