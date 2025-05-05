@@ -1,0 +1,9 @@
+.images img {
+    width: 250px;
+    border-radius: 5px;
+}
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
